@@ -1,16 +1,13 @@
-import { StrictMode } from 'react'
-import ReactDom from 'react-dom/client'
-import './index.css'
-import { HashRouter } from 'react-router-dom'
-import { createHashRouter, createRoutesFromElements, Route } from 'react-router-dom'
-import Layout from './Layout'
-import Home from './components/Home/Home'
-import About from './components/About/About'
-import Contact from './components/Contact/Contact'
-import Github, { gitHubInfoLoader } from './components/GIthub/Github'
-import User from './components/User/User'
-
-
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { HashRouter, RouterProvider, createHashRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Github, { gitHubInfoLoader } from './components/GIthub/Github';
+import User from './components/User/User';
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -24,13 +21,11 @@ const router = createHashRouter(
       </Route>
     </Route>
   ),
-  {
-    basename: '/react-router-mini-project/'
-  }
-)
+  // { basename: '/react-router-mini-project/' }
+);
 
-ReactDom.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);
