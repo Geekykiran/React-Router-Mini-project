@@ -29,7 +29,7 @@ To install and set up the project, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/react-router.git
+    git clone https://github.com/Geekykiran/react-router-mini-project.git
     ```
 2. Navigate to the project directory:
     ```bash
